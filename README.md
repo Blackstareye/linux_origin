@@ -5,9 +5,9 @@
   <p align="center">
       Instruction for running Origin on Linux.
     <br />
-    <a href="https://github.com/Blackstareye/linux_originissues">Report Bug</a>
+    <a href="https://github.com/Blackstareye/linux_origin/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Blackstareye/linux_originissues">Request Feature</a>
+    <a href="https://github.com/Blackstareye/linux_origin/issues">Request Feature</a>
   </p>
 </p>
 <hr>
@@ -30,7 +30,7 @@ If you want to skip the bla bla go straight to [Getting a USB Stick](#getting-a-
 
 ### Story
 
-I tried several ways to get a nice little linux usb stick, here are some quick "mile stones" on this journey:
+I tried several ways to get a nice little linux usb stick, but in the end it was not possible, but here are some quick "mile stones" on this journey:
 
 * Puppy OS - no Lutris
 
