@@ -1,9 +1,10 @@
-# Project Origin on Linux 
-
-  <h3 align="center">Project Origin on Linux</h3>
+# 
 
   <p align="center">
-      Instruction for running Origin on Linux.
+      Project Origin on Linux
+  </p>
+  <p align="center">
+      a (hopefully) beginner friendly guide for running Origin on Linux.
     <br />
     <a href="https://github.com/Blackstareye/linux_origin/issues">Report Bug</a>
     ·
@@ -12,21 +13,60 @@
 </p>
 <hr>
 
-Before you start, take a step back and ask yourself, 
+## TOS
+ [](#)
+  - [Requirements](#requirements)
+  - [Before you start](#before-you-start)
+  - [Little Story Time - My Journey on this project](#little-story-time---my-journey-on-this-project)
+    - [Info](#info)
+    - [Story](#story)
+  - [Getting a USB Stick](#getting-a-usb-stick)
+  - [Flashing USB Stick](#flashing-usb-stick)
+    - [Windows](#windows)
+    - [Linux](#linux)
+  - [Getting Nvidia Driver](#getting-nvidia-driver)
+    - [on Ubuntu](#on-ubuntu)
+    - [on PopOs](#on-popos)
+    - [on Manjaro(Version 21)](#on-manjaroversion-21)
+  - [The Steps for running Origin on Linux](#the-steps-for-running-origin-on-linux)
+  - [Scripts (not tested yet)](#scripts-not-tested-yet)
+  - [Additional Gaming OS that can be mentioned](#additional-gaming-os-that-can-be-mentioned)
+  - [Additional Ressources](#additional-ressources)
+  - [License](#license)
+  - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
+  - [Support](#support)
+  
+<hr>
 
-"is this game also on steam ?" 
+**This guide is target for casual users and gamers.**
 
-If so, use **steam proton** for your games. Most Games will work out of the box ! :) 
+This Instruction helps you installing all important things for running origin on a linux machine. It provides also scripts for installing the required software. Additionally there is a [script](install_OBS.sh) for installing OBS-Studio.
+
+<hr>
+
+If you are familiar with linux you don't really need this guide. Just install lutris and then origin following this [guide](https://github.com/lutris/docs/blob/master/Origin.md) or use the commands on this [section](#the-steps-for-running-origin-on-linux).
+
+## Requirements
+
+* a place (on your ssd / hd) where you want to install linux
+* a usb stick (for installing linux)
+
+## Before you start
+
+Before you start, take a step back and ask yourself,
+
+"is this game also on steam ?"
+
+If so, use **steam proton** for your games. Most Games will work out of the box ! :)
 
 Take also a look on [Proton DB](https://www.protondb.com) and search your game for getting more information.
 
-
 ## Little Story Time - My Journey on this project
 
-### Info 
-If you want to skip the bla bla go straight to [Getting a USB Stick](#getting-a-usb-stick) or [The Steps for running Origin on Linux](#the-steps-for-running-origin-on-linux) 
+### Info
 
-
+If you want to skip the bla bla go straight to [Getting a USB Stick](#getting-a-usb-stick) or [The Steps for running Origin on Linux](#the-steps-for-running-origin-on-linux)
 
 ### Story
 
@@ -39,9 +79,9 @@ I tried several ways to get a nice little linux usb stick, but in the end it was
 * Slax - no nvidia driver (have to compile it lol)
 
 * LiveCDs :
-  * Ubuntu : hard to customize 
+  * Ubuntu : hard to customize
     * Cubic - Dependencies of NVidia, Lutris and OBS are a mess on   live cd isos
-    * LiveCDs with Casper: could not install OBS, Lutris and the system takes very long with nvidia drivers 
+    * LiveCDs with Casper: could not install OBS, Lutris and the system takes very long with nvidia drivers
 
 So if you can avoid nvidia so far ... it's quite easy getting a running usb stick with linux.
 
@@ -52,15 +92,15 @@ Then dual boot into this linux.
 
 For that approach I recommend **PopOs**, **Ubuntu** or **Manjaro**
 
-
-## Getting a USB Stick 
+## Getting a USB Stick
 
 Recommended Distros:
-* PopOs: https://pop.system76.com
-* Ubuntu: https://ubuntu.com/download
-* Manjaro: https://manjaro.org/download/
 
-if you are unsure what to choose, use popOs :) 
+* PopOs: <https://pop.system76.com>
+* Ubuntu: <https://ubuntu.com/download>
+* Manjaro: <https://manjaro.org/download/>
+
+if you are unsure what to choose, use popOs :)
 
 ## Flashing USB Stick
 
@@ -68,16 +108,16 @@ if you are unsure what to choose, use popOs :)
 
 Download the Software [Etcher](https://www.balena.io/etcher/) and use it. It's pretty straight forward.
 
-
 For more advanced user I recommend [Rufus](https://rufus.ie/de/) or [Universal-USB-Installer](https://universal-usb-installer.en.lo4d.com/windows).
 
-
-### Linux 
+### Linux
 
 > sudo dd if=/your/iso of=/your/usb status=progress
-##  Getting Nvidia Driver 
+
+## Getting Nvidia Driver
 
 ### on Ubuntu
+
 1. (Connect to the Internet)
 2. [Nvidia](https://phoenixnap.com/kb/install-nvidia-drivers-ubuntu) Driver
    1. Call Software and Update Center
@@ -85,29 +125,31 @@ For more advanced user I recommend [Rufus](https://rufus.ie/de/) or [Universal-U
    3. Instrall NVidia Drivers (proprietary, tested)
    4. Click on Apply Changes
 
-###  on PopOs
+### on PopOs
 
-1. Download the version that has the nvidia drivers 
+1. Download the version that has the nvidia drivers
 
-###  on Manjaro(Version 21)
+### on Manjaro(Version 21)
 
 >sudo mhwd -a pci nonfree 0300
 
 ## The Steps for running Origin on Linux
 
-1. install wine 
+1. install wine
    1. > sudo apt install wine
 2. install origin relevant drivers
    1. Using [Origin Guide for Lutris](https://github.com/lutris/docs/blob/master/Origin.md)
-      
-       Ubuntu: 
+
+       Ubuntu:
+
        ```bash
        sudo apt install libgnutls30:i386 libldap-dev libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386
        ```
-      
+
 3. install lutris
-   
+
     Ubuntu
+
     ```bash
       sudo add-apt-repository ppa:lutris-team/lutris
     
@@ -115,14 +157,15 @@ For more advanced user I recommend [Rufus](https://rufus.ie/de/) or [Universal-U
 
       sudo apt install lutris
     ```
+
 4. open lutris, search for origin on "lutris" tab and "community" (right tab)
 5. install it on a **ext4 partition** (or your linux partition you installed your linux)
 
 6. After Origin is installed, start it. It will fail the update, don't worry!  
-Stop it and start it again and it will work :) 
+Stop it and start it again and it will work :)
 7. login as usual.
 8. Download a game of your choice (e.g Sims 4 ( working! :) )
-10. Have fun! :D 
+10. Have fun! :D
 
 ## Scripts (not tested yet)
 
@@ -130,16 +173,15 @@ Stop it and start it again and it will work :)
    1. >sudo bash ./run.sh
 2. Run additional OBS installation for Ubuntu based Distros
    1. >sudo bash ./install_OBS.sh
-   
+
 ## Additional Gaming OS that can be mentioned
 
 * Garuda (Arch Based)
 * Drauger (Ubuntu Based)
 
-## Additional Ressources 
+## Additional Ressources
 
-1. https://www.reddit.com/r/linux_gaming/comments/lve07i/how_to_install_play_ea_origin_games_on_linux/
-
+1. <https://www.reddit.com/r/linux_gaming/comments/lve07i/how_to_install_play_ea_origin_games_on_linux/>
 
 <!-- LICENSE -->
 ## License
@@ -158,15 +200,15 @@ Project Link: [https://github.com/Blackstareye/linux_origin](https://github.com/
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* Talks, raw testing, helpful tips and Opinions: [Columbarius](https://github.com/columbarius)
+* Talks, helpful tips and Opinions: [Columbarius](https://github.com/columbarius)
 * [Readme Template](https://github.com/othneildrew/Best-README-Template)
 
-## Support 
+## Support
 
 If you like my work and want to support me and my work, then this is the way:
 
 * [kofi](https://ko-fi.com/black_eye)
 * [patreon](https://www.patreon.com/black_eye_s?fan_landing=true)
-* [tipee](https://www.tipeeestream.com/blackeye/donation)
+* [tipeee](https://www.tipeeestream.com/blackeye/donation)
 
 Many Thanks ♥
